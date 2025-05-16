@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shadow DOM with TypeScript</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      height: 100vh;
+      font-family: sans-serif;
+    }
+
+    #side-panel {
+      width: 200px;
+      background-color: #2c3e50;
+      color: white;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #side-panel button {
+      margin: 5px 0;
+      padding: 10px;
+      background-color: #34495e;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    #main {
+      flex-grow: 1;
+      padding: 20px;
+    }
+
+    .shadow-host {
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="side-panel">
+    <button>Button 1</button>
+    <button>Button 2</button>
+    <button>Button 3</button>
+  </div>
+
+  <div id="main">
+    <div id="shadow-host-1" class="shadow-host"></div>
+    <div id="shadow-host-2" class="shadow-host"></div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
